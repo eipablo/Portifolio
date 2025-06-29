@@ -1,215 +1,291 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio - Pablo Vinícius</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="img/android-chrome-512x512.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="img/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+  </head>
 
-</head>
-
-<body class="dark-mode">
+  <body class="dark-mode">
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Pablo Vinícius</div>
-                <div class="nav-right">
-                    <div class="theme-switcher">
-                        <button class="theme-btn" data-theme="light">
-                            <i class="fas fa-sun"></i>
-                        </button>
-                        <button class="theme-btn active" data-theme="dark">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </div>
-                    <div class="language-switcher">
-                        <button class="language-btn active" data-lang="pt">PT</button>
-                        <button class="language-btn" data-lang="en">EN</button>
-                    </div>
-                </div>
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <div class="logo">Pablo Vinícius</div>
+          <div class="nav-right">
+            <div class="theme-switcher">
+              <button class="theme-btn" data-theme="light">
+                <i class="fas fa-sun"></i>
+              </button>
+              <button class="theme-btn active" data-theme="dark">
+                <i class="fas fa-moon"></i>
+              </button>
+            </div>
+            <div class="language-switcher">
+              <button class="language-btn active" data-lang="pt">PT</button>
+              <button class="language-btn" data-lang="en">EN</button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="container">
-        <section id="about" class="hero">
-            <h1 class="lang-pt">Olá, eu sou o Pablo!</h1>
-            <h1 class="lang-en">Hi, I'm Pablo!</h1>
+      <section id="about" class="hero">
+        <h1 class="lang-pt">Olá, eu sou o Pablo!</h1>
+        <h1 class="lang-en">Hi, I'm Pablo!</h1>
 
-            <p class="lang-pt">Estudante de Desenvolvimento de Sistemas</p>
-            <p class="lang-en">Systems Development student</p>
+        <p class="lang-pt">Estudante de Desenvolvimento de Sistemas</p>
+        <p class="lang-en">Systems Development student</p>
 
-            <p class="lang-pt">Transformando ideias em código com elegância</p>
-            <p class="lang-en">Turning ideas into elegant code</p>
+        <p class="lang-pt">Transformando ideias em código com elegância</p>
+        <p class="lang-en">Turning ideas into elegant code</p>
 
-            <a href="#contact" class="btn lang-pt">Vamos conversar</a>
-            <a href="#contact" class="btn lang-en">Let's talk</a>
-        </section>
+        <a href="#contact" class="btn lang-pt">Vamos conversar</a>
+        <a href="#contact" class="btn lang-en">Let's talk</a>
+      </section>
 
-        <section id="skills">
-            <h2 class="section-title lang-pt">Habilidades</h2>
-            <h2 class="section-title lang-en">Skills</h2>
+      <section id="skills">
+        <h2 class="section-title lang-pt">Habilidades</h2>
+        <h2 class="section-title lang-en">Skills</h2>
 
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                    <h3>HTML</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                    <h3>CSS</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fab fa-react"></i></div>
-                    <h3>React</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>SQL</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fa-solid fa-wind"></i></div>
-                    <h3>Tailwind CSS</h3>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h2 class="section-title lang-pt">Projetos</h2>
-            <h2 class="section-title lang-en">Projects</h2>
-
-            <div class="project-grid">
-                <div class="project-card"> <!--Sistema Pet Shop-->
-                    <img src="img/image.png" alt="Capa do Projeto 1" class="project-image" />
-                    <div class="project-info">
-                        <h3 class="lang-pt">Sistema de Gestão de Pet Shop (Em Construção)</h3>
-                        <h3 class="lang-en">Pet Shop Management System</h3>
-                        <p class="lang-pt">Sistema completo de gestão para pet shops com funcionalidades como cadastro
-                            de clientes e pets, agendamento de serviços (banho, tosa, entregas), controle de estoque com
-                            alertas automáticos e histórico de atendimentos. Ideal para otimizar o atendimento e a
-                            organização do negócio.</p>
-                        <p class="lang-en">A complete management system for pet shops with features like client and pet
-                            registration, service scheduling (bathing, grooming, deliveries), real-time inventory
-                            control with alerts, and service history tracking. Designed to optimize service and business
-                            organization.</p>
-                        <div class="project-footer">
-                            <div class="project-links">
-                                <a href="https://github.com/eipablo/PetShopSystem" target="_blank" title="GitHub">
-                                    <!--Editar link depois-->
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://seu-projeto.vercel.app" target="_blank" title="Visualizar Projeto">
-                                    <!--Editar link depois-->
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                            <div class="project-tech">
-                                <i class="fab fa-js-square" title="JavaScript"></i>
-                                <i class="fab fa-react" title="React"></i>
-                                <i class="fa-solid fa-database" title="MySql"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card"> <!--Site Lol-->
-                    <img src="img/lol.jpg" alt="Capa do Projeto 1" class="project-image" />
-                    <div class="project-info">
-                        <h3 class="lang-pt">Site Campeonato Amador LoL (Em Construção)</h3>
-                        <h3 class="lang-en">LoL Amateur Championship Website</h3>
-                        <p class="lang-pt">Site oficial de um campeonato amador de League of Legends, com regulamento, times, tabela de jogos, calendário interativo, sistema de doações para premiação e painel administrativo. Tudo para organizar e divulgar o torneio de forma clara e profissional.</p>
-                        <p class="lang-en">Official website of an amateur League of Legends tournament, featuring rules, teams, match standings, interactive calendar, donation system for prizes, and admin panel. Built to organize and showcase the event clearly and professionally.</p>
-                        <div class="project-footer">
-                            <div class="project-links">
-                                <a href="https://github.com/eipablo/PetShopSystem" target="_blank" title="GitHub">
-                                    <!--Editar link depois-->
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://seu-projeto.vercel.app" target="_blank" title="Visualizar Projeto">
-                                    <!--Editar link depois-->
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                            <div class="project-tech">
-                                <i class="fab fa-js-square" title="JavaScript"></i>
-                                <i class="fab fa-react" title="React"></i>
-                                <i class="fab fa-css3-alt" title="CSS3"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="project-card"> <!--Bot Voip-->
-                <img src="img/botdiscord.png" alt="Capa do Projeto 1" class="project-image" />
-                <div class="project-info">
-                    <h3 class="lang-pt">Bot de Voz Para Discord</h3>
-                    <h3 class="lang-en">Auto Voice Bot for Discord</h3>
-                    <p class="lang-pt">Bot para Discord que cria e remove automaticamente canais de voz temporários.</p>
-                    <p class="lang-en">Bot for Discord that automatically creates and removes temporary voice channels</p>
-                    <div class="project-footer">
-                        <div class="project-links">
-                            <a href="https://github.com/eipablo/Bot-Discord-Voz" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-tech">
-                            <i class="fab fa-python" title="Python"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- + projetos aqui (antes da /div da grid)-->
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <h3>HTML</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <h3>CSS</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <h3>React</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>SQL</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fa-solid fa-wind"></i></div>
+            <h3>Tailwind CSS</h3>
+          </div>
         </div>
+      </section>
 
-        </section>
+      <section id="projects" class="projects-section">
+        <h2 class="section-title lang-pt">Projetos</h2>
+        <h2 class="section-title lang-en">Projects</h2>
 
+        <div class="project-grid">
+          <!-- Projeto: Sistema Pet Shop
+          <div class="project-card" onclick="toggleCard(this)">
+            <img
+              src="img/image.png"
+              alt="Capa do Projeto 1"
+              class="project-image"
+            />
+            <h3 class="project-title lang-pt">
+              Sistema de Gestão de Pet Shop (Em Construção)
+            </h3>
+            <h3 class="project-title lang-en">Pet Shop Management System</h3>
 
-        <section id="contact">
-            <h2 class="section-title lang-pt">Contato</h2>
-            <h2 class="section-title lang-en">Contact</h2>
-
-            <p class="lang-pt" style="text-align: center; margin-bottom: 28px;">Vamos criar algo incrível juntos!</p>
-            <p class="lang-en" style="text-align: center; margin-bottom: 28px;">Let's build something amazing together!
-            </p>
-
-            <div class="social-links">
-                <a href="https://github.com/eipablo" class="social-link" target="_blank" style="text-decoration: none;" title="GitHub">
-                    <i class="fab fa-github"></i>
+            <div class="project-details">
+              <p class="project-description lang-pt">
+                Sistema completo de gestão para pet shops com funcionalidades
+                como cadastro de clientes e pets, agendamento de serviços
+                (banho, tosa, entregas), controle de estoque com alertas
+                automáticos e histórico de atendimentos.
+              </p>
+              <p class="project-description lang-en">
+                A complete management system for pet shops with features like
+                client and pet registration, service scheduling (bathing,
+                grooming, deliveries), real-time inventory control with alerts,
+                and service history tracking.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/eipablo/PetShopSystem"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/pablo-vinicius-silva-souza-2a23031b3/" class="social-link" target="_blank" style="text-decoration: none;" title="Linkedin">
-                    <i class="fab fa-linkedin"></i>
+                <a
+                  href="https://seu-projeto.vercel.app"
+                  target="_blank"
+                  title="Visualizar Projeto"
+                >
+                  <i class="fas fa-external-link-alt"></i>
                 </a>
-                <a href="mailto:pablo.vs.souza@gmail.com" class="social-link" target="_blank" style="text-decoration: none;" title="Enviar E-mail">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+              </div>
+              <div class="project-tech">
+                <i class="fab fa-js-square" title="JavaScript"></i>
+                <i class="fab fa-react" title="React"></i>
+                <i class="fa-solid fa-database" title="MySQL"></i>
+              </div>
             </div>
-        </section>
+          </div> -->
+
+          <!-- Projeto: Site Campeonato LoL -->
+          <div class="project-card" onclick="toggleCard(this)">
+            <img
+              src="img/lol.jpg"
+              alt="Capa do Projeto 2"
+              class="project-image"
+            />
+            <h3 class="project-title lang-pt">Site Campeonato Amador LoL</h3>
+            <h3 class="project-title lang-en">
+              LoL Amateur Championship Website
+            </h3>
+
+            <div class="project-details">
+              <p class="project-description lang-pt">
+                Site para um campeonato amador de League of Legends, com
+                regulamento, times, tabela de jogos, calendário interativo,
+                sistema de doações para premiação e mais.
+              </p>
+              <p class="project-description lang-en">
+                Site for an amateur League of Legends tournament, featuring
+                rules, teams, match schedule, interactive calendar, donation
+                system for prize pool, and more.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/eipablo/urcl-site"
+                  target="_blank"
+                  title="GitHub Project"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://urcl-site.vercel.app"
+                  target="_blank"
+                  title="Visualizar Projeto"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+              <div class="project-tech">
+                <i class="fab fa-js-square" title="JavaScript"></i>
+                <i class="fab fa-react" title="React"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto: Bot Discord -->
+          <div class="project-card" onclick="toggleCard(this)">
+            <img
+              src="img/botdiscord.png"
+              alt="Capa do Projeto 3"
+              class="project-image"
+            />
+            <h3 class="project-title lang-pt">Bot de Voz Para Discord</h3>
+            <h3 class="project-title lang-en">Auto Voice Bot for Discord</h3>
+
+            <div class="project-details">
+              <p class="project-description lang-pt">
+                Bot para Discord que cria e remove automaticamente canais de voz
+                temporários.
+              </p>
+              <p class="project-description lang-en">
+                Bot for Discord that automatically creates and removes temporary
+                voice channels.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/eipablo/Bot-Discord-Voz"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="project-tech">
+                <i class="fab fa-python" title="Python"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title lang-pt">Contato</h2>
+        <h2 class="section-title lang-en">Contact</h2>
+
+        <p class="lang-pt" style="text-align: center; margin-bottom: 28px">
+          Vamos criar algo incrível juntos!
+        </p>
+        <p class="lang-en" style="text-align: center; margin-bottom: 28px">
+          Let's build something amazing together!
+        </p>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/eipablo"
+            class="social-link"
+            target="_blank"
+            style="text-decoration: none"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pablo-vinicius-silva-souza-2a23031b3/"
+            class="social-link"
+            target="_blank"
+            style="text-decoration: none"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="#"
+            class="social-link"
+            onclick="copyEmailToClipboard('pablo.vs.souza@gmail.com'); return false;"
+            style="text-decoration: none"
+            title="Copiar E-mail"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <div id="toast" class="toast-hidden">
+          <span id="toast-message">E-mail copiado!</span>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p class="lang-pt">© 2025 Pablo Vinícius Silva Souza. Todos os direitos reservados.</p>
-            <p class="lang-en">© 2025 Pablo Vinícius Silva Souza. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p class="lang-pt">
+          © 2025 Pablo Vinícius Silva Souza. Todos os direitos reservados.
+        </p>
+        <p class="lang-en">
+          © 2025 Pablo Vinícius Silva Souza. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <button id="backToTop" title="Voltar ao topo">↑</button>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

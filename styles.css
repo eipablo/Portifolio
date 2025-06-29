@@ -408,6 +408,9 @@ footer {
   z-index: 1000;
   box-shadow: 0 6px 12px rgba(167, 139, 250, 0.15);
 }
+
+/* ====== Estilo base dos cards de projeto ====== */
+
 .projects-section {
   padding: 60px 24px;
   max-width: 1200px;
@@ -415,100 +418,141 @@ footer {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .project-card {
   background-color: var(--card-bg);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  position: relative;
+  flex: 1 1 100%;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(167, 139, 250, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
+.project-card img {
   width: 100%;
-  height: 180px;
+  height: 450px; 
   object-fit: cover;
+  object-position: center;
+  background-color: #1a1a1a;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.8rem;
+  pointer-events: none;
 }
 
-.project-info {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+.project-card img {
+  transition: transform 0.3s ease;
 }
 
-.project-info h3 {
-  margin: 0 0 12px;
-  font-size: 1.3rem;
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .project-card img {
+    height: 150px;
+  }
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
   color: var(--primary);
 }
 
-.project-info p {
+.project-details {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card.active .project-details {
+  display: block;
+  opacity: 1;
+  margin-top: 1rem;
+  animation: fadeSlideIn 0.3s ease;
+}
+
+.project-description {
+  color: var(--light-text);
   font-size: 0.95rem;
-  margin-bottom: 16px;
-  flex-grow: 1;
+  margin-bottom: 1rem;
 }
+
+/* ====== Links ====== */
+
 .project-links {
-  margin-top: auto; /* empurra para o final */
-  display: flex;
-  gap: 16px;
-}
-.project-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between; /* espaça os grupos entre as extremidades */
-  align-items: center;
-  padding-top: 12px;
-  border-top: 1px solid var(--border-color);
-  gap: 16px; /* espaço entre os grupos */
-  flex-wrap: nowrap; /* para manter tudo em uma linha */
+  margin-bottom: 0.8rem;
 }
 
 .project-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: var(--text-color);
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  color: var(--primary-light);
   transition: color 0.3s;
   text-decoration: none;
-}
-
-.project-links a:last-child {
-  margin-right: 0; /* remover margem no último link */
 }
 
 .project-links a:hover {
   color: var(--primary);
 }
 
-.project-tech {
-  display: flex;
-  align-items: center;
-}
+
+/* ====== Tecnologias ====== */
 
 .project-tech i {
-  font-size: 1.4rem;
-  color: var(--text-color);
-  margin-left: 12px;
-  cursor: default;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  color: var(--primary-light);
 }
 
-.project-tech i:first-child {
-  margin-left: 0; /* sem margem esquerda para o primeiro ícone */
+
+@media (min-width: 768px) {
+  .project-card {
+    flex: 1 1 calc(50% - 10px); /* duas colunas com gap */
+  }
 }
 
-.project-tech i:hover {
-  color: var(--primary);
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos do Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4CAF50; /* Cor de fundo */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#toast.toast-visible {
+  opacity: 1;
 }
