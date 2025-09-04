@@ -664,6 +664,22 @@ footer {
   .project-card img {
     height: 150px;
   }
+
+  #backToTop {
+    position: fixed;
+    bottom: 18px;
+    right: 12px;
+    padding: 12px 14px;
+    font-size: 1.2rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(167,139,250,0.18);
+    z-index: 1100;
+    display: none; /* será exibido via JS */
+    cursor: pointer;
+  }
 }
 
 .project-title {
