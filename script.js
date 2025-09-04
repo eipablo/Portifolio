@@ -33,12 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
             languageButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
+            document.querySelectorAll('.lang-pt').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.remove('active');
+            });
+
             if (lang === 'pt') {
-                document.querySelectorAll('.lang-pt').forEach(el => el.style.display = 'block');
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-pt').forEach(el => el.classList.add('active'));
             } else {
-                document.querySelectorAll('.lang-pt').forEach(el => el.style.display = 'none');
-                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.add('active'));
             }
         });
     });
@@ -51,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('active');
         });
     });
+
+    // Idioma padrão: PT
+    document.querySelectorAll('.lang-pt').forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('active'));
 });
 
 // ========== Botão "Voltar ao Topo" ==========
@@ -112,4 +121,33 @@ document.querySelectorAll(".copy-email").forEach((link) => {
     const email = link.getAttribute("data-email");
     copyEmailToClipboard(email);
   });
+});
+
+// ====== Menu Hamburguer ======
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburgerBtn.addEventListener('click', function () {
+  hamburgerBtn.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+});
+
+// Fecha o menu ao clicar em um link
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('active');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener('click', function (e) {
+  if (
+    mobileMenu.classList.contains('open') &&
+    !mobileMenu.contains(e.target) &&
+    !hamburgerBtn.contains(e.target)
+  ) {
+    hamburgerBtn.classList.remove('active');
+    mobileMenu.classList.remove('open');
+  }
 });
