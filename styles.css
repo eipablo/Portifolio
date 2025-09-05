@@ -579,13 +579,51 @@ footer {
     font-size: 0.85rem;
   }
 
-  /* Botão Voltar ao Topo */
+  /* back to top telas menores */
   #backToTop {
+    position: fixed;
     bottom: 18px;
     right: 12px;
     padding: 12px 14px;
     font-size: 1.2rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(167,139,250,0.18);
+    z-index: 1100;
+    display: none; 
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
   }
+
+  #backToTop:hover {
+    background: var(--primary-light);
+    transform: scale(1.08);
+  }
+
+
+  /* back to top telas maiores */
+  #backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 18px;
+  padding: 14px 16px;
+  font-size: 1.4rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(167,139,250,0.18);
+  z-index: 1100;
+  display: none; 
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+#backToTop:hover {
+  background: var(--primary-light);
+  transform: scale(1.08);
+}
 
   /* Hamburger e Mobile Menu */
   .hamburger {
@@ -665,21 +703,6 @@ footer {
     height: 150px;
   }
 
-  #backToTop {
-    position: fixed;
-    bottom: 18px;
-    right: 12px;
-    padding: 12px 14px;
-    font-size: 1.2rem;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(167,139,250,0.18);
-    z-index: 1100;
-    display: none; /* será exibido via JS */
-    cursor: pointer;
-  }
 }
 
 .project-title {
@@ -738,7 +761,7 @@ footer {
 
 @media (min-width: 768px) {
   .project-card {
-    flex: 1 1 calc(50% - 10px); /* duas colunas com gap */
+    flex: 1 1 calc(50% - 10px); 
   }
 }
 
@@ -759,7 +782,7 @@ footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #4CAF50; /* Cor de fundo */
+  background: #4CAF50; 
   color: white;
   padding: 12px 24px;
   border-radius: 4px;
@@ -959,7 +982,6 @@ footer {
   border-radius: 2px;
   width: 0;
   transition: width 0.3s, background 0.3s;
-  /* Coloca a linha abaixo do texto */
 }
 
 .mobile-menu a:hover::before,
