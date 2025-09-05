@@ -404,6 +404,38 @@ footer {
   }
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 28px;
+  right: 18px;
+  padding: 14px 16px;
+  font-size: 1.7rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30%;
+  box-shadow: 0 2px 8px rgba(167,139,250,0.18);
+  z-index: 1100;
+  display: none; /* será controlado pelo JS */
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#backToTop:hover {
+  background: var(--primary-light);
+  transform: scale(1.08);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+  #backToTop {
+    bottom: 18px;
+    right: 12px;
+    padding: 12px 14px;
+    font-size: 1.2rem;
+  }
+}
+
 /* ====== Melhorias para telas menores ====== */
 @media (max-width: 600px) {
   .container {
@@ -579,51 +611,6 @@ footer {
     font-size: 0.85rem;
   }
 
-  /* back to top telas menores */
-  #backToTop {
-    position: fixed;
-    bottom: 18px;
-    right: 12px;
-    padding: 12px 14px;
-    font-size: 1.2rem;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(167,139,250,0.18);
-    z-index: 1100;
-    display: none; 
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  #backToTop:hover {
-    background: var(--primary-light);
-    transform: scale(1.08);
-  }
-
-
-  /* back to top telas maiores */
-  #backToTop {
-  position: fixed;
-  bottom: 24px;
-  right: 18px;
-  padding: 14px 16px;
-  font-size: 1.4rem;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(167,139,250,0.18);
-  z-index: 1100;
-  display: none; 
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-#backToTop:hover {
-  background: var(--primary-light);
-  transform: scale(1.08);
-}
 
   /* Hamburger e Mobile Menu */
   .hamburger {
